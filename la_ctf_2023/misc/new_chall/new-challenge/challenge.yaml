@@ -1,0 +1,20 @@
+name: new-challenge
+author: arcblroth
+description: |-
+  @bliutech could you push an updated description for this challenge thx
+  
+  `git clone git://{{ host }}:{{ port }}/new-challenge.git`
+
+flag: "TODO(bliutech) add flag"
+
+containers:
+  main:
+    build: .
+    replicas: 1
+    ports:
+      - 9418
+
+expose:
+  main:
+  - target: 9418
+    tcp: 31152
